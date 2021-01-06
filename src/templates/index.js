@@ -17,7 +17,7 @@ const IndexTemplate = ({ pageContext }) => {
           }
         }
       }
-      placeholderImage: file(relativePath: { eq: "favicon.png" }) {
+      photo: file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -28,7 +28,7 @@ const IndexTemplate = ({ pageContext }) => {
   `)
 
   const { positions } = pageContext
-  const { fluid } = data.placeholderImage.childImageSharp
+  const { fluid } = data.photo.childImageSharp
   const { author } = data.site.siteMetadata
 
   return (
