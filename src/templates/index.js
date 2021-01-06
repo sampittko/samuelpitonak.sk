@@ -50,7 +50,6 @@ const IndexTemplate = ({ pageContext }) => {
               {author.fullname}
             </a>
             <a
-              target="_blank"
               className="inline-block px-3 py-1 ml-2 text-sm font-normal transition duration-150 ease-in-out bg-gray-800 rounded-full text-gray-50 hover:bg-amber-800"
               href={`https://google.com/search?q=${author.username}`}
               title="Find me on the Internet"
@@ -64,8 +63,7 @@ const IndexTemplate = ({ pageContext }) => {
               const LinkComponent = () => (
                 <a
                   href={position.link}
-                  target="_blank"
-                  className="block pb-1 text-center md:pb-0 md:inline hover:text-amber-900"
+                  className="block py-1 text-center md:pb-0 md:inline hover:text-amber-900"
                   title={position.hover}
                   rel="noreferrer"
                 >

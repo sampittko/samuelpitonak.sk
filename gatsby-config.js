@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Samuel Pitoňák`,
     description: `Personal website of Samuel Pitoňák`,
+    thesis: {
+      link: "http://beautofuel.vps.wbsprt.com",
+      text: "beautofuel",
+    },
     author: {
       username: "sampittko",
       fullname: "Samuel Pitoňák",
@@ -9,7 +12,7 @@ module.exports = {
       socials: {
         twitter: "https://twitter.com/sampittko",
         linkedin: "https://linkedin.com/in/sampittko",
-        github: "http://github.com/sampittko",
+        github: "https://github.com/sampittko",
       },
       positions: {
         student: {
