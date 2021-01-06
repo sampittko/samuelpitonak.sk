@@ -1,13 +1,9 @@
-import React from "react"
+const NotFoundPage = () => {
+  if (typeof window !== "undefined") {
+    window.location = "/"
+  }
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="Not Found" />
-    <h1>This page does not exist!</h1>
-  </Layout>
-)
+  return null
+}
 
 export default NotFoundPage
