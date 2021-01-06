@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "@sampittko/samuelpitonak.sk",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.0.0-unversioned",
+  "author": "Samuel Pitoňák <sampittko@gmail.com>",
   "dependencies": {
     "autoprefixer": "^10.2.0",
     "gatsby": "^2.26.1",
@@ -27,9 +26,6 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -42,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sampittko/samuelpitonak.sk"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/sampittko/samuelpitonak.sk/issues"
   }
 }
