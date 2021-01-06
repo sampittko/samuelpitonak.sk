@@ -5,9 +5,12 @@ module.exports = {
     author: {
       username: "sampittko",
       fullname: "Samuel Pitoňák",
-      twitter: "https://twitter.com/sampittko",
-      linkedin: "https://linkedin.com/in/sampittko",
-      github: "http://github.com/sampittko",
+      email: "sampittko@gmail.com",
+      socials: {
+        twitter: "https://twitter.com/sampittko",
+        linkedin: "https://linkedin.com/in/sampittko",
+        github: "http://github.com/sampittko",
+      },
       positions: {
         student: {
           title: "Computer Science Student",

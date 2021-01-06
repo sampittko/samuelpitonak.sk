@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
 import Layout from "../components/layout"
@@ -13,6 +13,7 @@ const IndexTemplate = ({ pageContext }) => {
           author {
             username
             fullname
+            email
           }
         }
       }
@@ -40,39 +41,47 @@ const IndexTemplate = ({ pageContext }) => {
           alt={author.fullname}
         />
         <div className="space-y-1 font-medium leading-6 md:inline-block md:text-lg">
-          <h3 className="text-center text-gray-900 md:text-left">
-            {author.fullname}
-            <Link
+          <h3 className="text-center text-gray-800 md:text-left">
+            <a
+              href={`mailto:${author.email}`}
+              title="Send me an e-mail"
+              className="hover:text-amber-800"
+            >
+              {author.fullname}
+            </a>
+            <a
               target="_blank"
-              className="inline-block px-3 py-1 ml-2 text-sm font-normal text-gray-100 transition duration-150 ease-in-out bg-gray-900 rounded-full hover:bg-amber-800"
-              to={`https://google.com/search?q=${author.username}`}
+              className="inline-block px-3 py-1 ml-2 text-sm font-normal transition duration-150 ease-in-out bg-gray-800 rounded-full text-gray-50 hover:bg-amber-800"
+              href={`https://google.com/search?q=${author.username}`}
               title="Find me on the Internet"
+              rel="noreferrer"
             >
               @{author.username}
-            </Link>
+            </a>
           </h3>
           <p className="text-amber-800">
             {positions.map((position, i) => {
               const LinkComponent = () => (
-                <Link
-                  to={position.link}
+                <a
+                  href={position.link}
                   target="_blank"
-                  className="block text-center md:inline hover:text-amber-900"
+                  className="block pb-1 text-center md:pb-0 md:inline hover:text-amber-900"
                   title={position.hover}
+                  rel="noreferrer"
                 >
                   {position.title}
-                </Link>
+                </a>
               )
 
               if (i === positions.length - 1) {
-                return <LinkComponent />
+                return <LinkComponent key={`link-${i}`} />
               }
 
               return (
-                <>
+                <span key={`link-${i}`}>
                   <LinkComponent />
                   <span className="hidden md:inline">{", "}</span>
-                </>
+                </span>
               )
             })}
           </p>
