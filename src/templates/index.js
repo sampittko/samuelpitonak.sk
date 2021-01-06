@@ -37,10 +37,10 @@ const IndexTemplate = ({ pageContext }) => {
       <div className="md:space-x-4 md:flex md:items-center md:justify-center lg:space-x-6">
         <Img
           fluid={fluid}
-          className="w-24 h-24 mx-auto mb-5 rounded-full hover:animate-spin md:m-0 md:w-16 md:inline-block md:h-16 lg:w-20 lg:h-20"
+          className="w-24 h-24 mx-auto mb-5 rounded-full hover:animate-spin md:m-0 md:w-20 md:inline-block md:h-20 lg:w-32 lg:h-32"
           alt={author.fullname}
         />
-        <div className="space-y-1 font-medium leading-6 md:inline-block md:text-lg">
+        <div className="space-y-1 font-medium leading-6 md:inline-block md:text-lg lg:space-y-3 lg:text-2xl">
           <h3 className="text-center text-gray-800 md:text-left">
             <a
               href={`mailto:${author.email}`}
@@ -50,7 +50,7 @@ const IndexTemplate = ({ pageContext }) => {
               {author.fullname}
             </a>
             <a
-              className="inline-block px-3 py-1 ml-2 text-sm font-normal transition duration-150 ease-in-out bg-gray-800 rounded-full text-gray-50 hover:bg-amber-800"
+              className="inline-block px-3 py-1 ml-2 text-sm font-normal transition duration-150 ease-in-out bg-gray-800 rounded-full lg:text-lg text-gray-50 hover:bg-amber-800"
               href={`https://google.com/search?q=${author.username}`}
               title="Find me on the Internet"
               rel="noreferrer"
