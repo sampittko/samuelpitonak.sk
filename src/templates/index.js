@@ -33,18 +33,18 @@ const IndexTemplate = ({ pageContext }) => {
   return (
     <Layout>
       <SEO />
-      <div className="absolute p-10 md:p-20 lg:p-24 top-0 left-0 flex items-center space-x-4 lg:space-x-6">
+      <div className="space-x-4 md:flex md:items-center md:justify-center lg:space-x-6">
         <Img
           fluid={fluid}
-          className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full"
+          className="w-24 h-24 mx-auto my-5 rounded-full md:m-0 md:w-16 md:inline-block md:h-16 lg:w-20 lg:h-20"
           alt={author.fullname}
         />
-        <div className="leading-none sm:leading-1 font-medium text-xs sm:text-md md:text-lg leading-6 space-y-1">
-          <h3 className="text-gray-900">
+        <div className="space-y-1 font-medium leading-6 md:inline-block md:text-lg">
+          <h3 className="text-center text-gray-900 md:text-left">
             {author.fullname}
             <Link
               target="_blank"
-              className="ml-2 text-sm font-normal text-gray-100 hover:bg-amber-800 bg-gray-900 rounded-full px-3 py-1 inline-block absolute transition ease-in-out duration-150"
+              className="inline-block px-3 py-1 ml-2 text-sm font-normal text-gray-100 transition duration-150 ease-in-out bg-gray-900 rounded-full hover:bg-amber-800"
               to={`https://google.com/search?q=${author.username}`}
               title="Find me on the Internet"
             >
@@ -57,7 +57,7 @@ const IndexTemplate = ({ pageContext }) => {
                 <Link
                   to={position.link}
                   target="_blank"
-                  className="hover:text-amber-900"
+                  className="block text-center md:inline hover:text-amber-900"
                   title={position.hover}
                 >
                   {position.title}
@@ -71,7 +71,7 @@ const IndexTemplate = ({ pageContext }) => {
               return (
                 <>
                   <LinkComponent />
-                  {", "}
+                  <span className="hidden md:inline">{", "}</span>
                 </>
               )
             })}

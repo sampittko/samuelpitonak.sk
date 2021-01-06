@@ -1,14 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <footer className="absolute bottom-0 right-0 p-10 md:p-20 lg:p-24 mx-auto md:flex md:items-center md:justify-end">
+    <footer className={className}>
       <div className="flex justify-center space-x-6 md:order-2">
         <Link to="#" className="text-gray-400 hover:text-gray-500">
           <span className="sr-only">Twitter</span>
           <svg
-            className="h-6 w-6"
+            className="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -20,7 +20,7 @@ const Footer = () => {
         <Link to="#" className="text-gray-400 hover:text-gray-500">
           <span className="sr-only">GitHub</span>
           <svg
-            className="h-6 w-6"
+            className="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -36,7 +36,7 @@ const Footer = () => {
         <Link to="#" className="text-gray-400 hover:text-gray-500">
           <span className="sr-only">LinkedIn</span>
           <svg
-            className="h-5 w-5"
+            className="w-5 h-5"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"

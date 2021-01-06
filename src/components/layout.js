@@ -2,9 +2,9 @@ import React from "react"
 import Footer from "./footer"
 
 const Layout = ({ children }) => (
-  <div className="max-w-screen min-h-screen bg-gray-50 relative">
-    <main>{children}</main>
-    <Footer />
+  <div className="flex flex-col items-center justify-between min-h-screen p-10 max-w-screen bg-gray-50 md:p-20 lg:p-24">
+    <main className="md:self-start">{children}</main>
+    <Footer className="md:self-end" />
   </div>
 )
 
