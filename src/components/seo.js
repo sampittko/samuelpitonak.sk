@@ -13,6 +13,7 @@ const SEO = ({ description, lang, meta, title }) => {
             description
             author {
               fullname
+              username
             }
           }
         }
@@ -21,7 +22,7 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata.author.fullname
+  const defaultTitle = `${site.siteMetadata.author.fullname} (@${site.siteMetadata.author.username})`
 
   return (
     <Helmet
