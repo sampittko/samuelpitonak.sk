@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Socials from "./socials"
 
-const Footer = ({ className }) => {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -27,17 +27,17 @@ const Footer = ({ className }) => {
   const { thesis } = data.site.siteMetadata
 
   return (
-    <footer className={className}>
+    <footer className="text-center md:text-left">
       <a
         href={thesis.link}
         rel="noreferrer"
-        className="font-mono font-bold text-amber-800 hover:text-amber-900 hover:italic"
+        className="font-mono font-bold text-amber-800 hover:text-amber-900"
       >
         {thesis.text}
       </a>
       <Socials
         {...socials}
-        className="flex justify-center pt-4 space-x-6 md:pt-8 md:order-2"
+        className="flex justify-center pt-6 space-x-6 md:pt-8 md:order-2"
       />
     </footer>
   )
