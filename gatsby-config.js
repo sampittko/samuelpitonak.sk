@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     description: `Personal website of Samuel Pitoňák`,
+    siteUrl: `https://samuelpitonak.sk`,
     thesis: {
       link: "http://beautofuel.vps.wbsprt.com",
       text: "beautofuel",
@@ -42,15 +43,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Samuel Pitoňák (@sampittko)`,
+        short_name: `Samuel Pitoňák`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F9FAFB`,
+        theme_color: `#92400E`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://samuelpitonak.sk",
+        sitemap: "https://samuelpitonak.sk/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }

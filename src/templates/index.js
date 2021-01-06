@@ -33,7 +33,7 @@ const IndexTemplate = ({ pageContext }) => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO positions={positions} />
       <div className="md:space-x-4 md:flex md:items-center md:justify-center lg:space-x-6">
         <Img
           fluid={fluid}
