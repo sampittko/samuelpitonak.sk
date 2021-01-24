@@ -3,7 +3,7 @@ import React from "react"
 import Socials from "./socials"
 import Thesis from "./thesis"
 
-const Footer = () => {
+const Footer = ({ ...props }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -30,11 +30,11 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="z-10 text-center md:text-left">
-        <Thesis {...thesis} />
+      <footer {...props}>
+        <Thesis {...thesis} className="max-w-xs md:max-w-none" />
         <Socials
           {...socials}
-          className="flex justify-center pt-6 space-x-6 sm:justify-start md:pt-8"
+          className="flex justify-center pt-6 space-x-6 md:justify-start md:pt-8 "
         />
       </footer>
       <div className="absolute bottom-0 left-0 z-0 w-screen bg-gray-50 h-1/3" />

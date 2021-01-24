@@ -1,13 +1,13 @@
 import React from "react"
 
-const Thesis = ({ text, link, duration }) => (
-  <div className="font-mono font-bold">
+const Thesis = ({ text, link, duration, ...rest }) => (
+  <div {...rest}>
     <a
       href={link}
       rel="noreferrer"
       className=" text-amber-800 hover:text-amber-900"
     >
-      <span className="animate-pulse">
+      <span className="font-black">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -25,7 +25,7 @@ const Thesis = ({ text, link, duration }) => (
         {text}
       </span>
     </a>
-    <span className="mt-2 sm:mt-0 ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+    <span className="mt-2 md:mt-0 ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm bg-gray-100 text-gray-800 animate-pulse">
       {duration}
     </span>
   </div>

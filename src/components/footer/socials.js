@@ -1,7 +1,7 @@
 import React from "react"
 
-const Socials = ({ twitter, github, linkedin, className }) => (
-  <div className={className}>
+const Socials = ({ twitter, github, linkedin, ...rest }) => (
+  <div {...rest}>
     <a
       href={twitter}
       rel="noreferrer"
