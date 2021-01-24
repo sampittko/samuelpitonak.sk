@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
-import Name from "./profile/name"
-import Positions from "./profile/positions"
+import Name from "./name"
+import Positions from "./positions"
 
 const Profile = ({ fluidPhoto, author, positions, ...rest }) => (
   <div {...rest}>
