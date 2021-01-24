@@ -38,7 +38,7 @@ const IndexTemplate = ({ pageContext }) => {
         fluidPhoto={fluidPhoto}
         author={author}
         positions={positions}
-        className="md:space-x-4 md:flex md:items-center md:justify-center lg:space-x-6"
+        className="-mt-2 md:mt-0 md:space-x-4 md:flex md:items-center md:justify-center lg:space-x-6"
       />
     </Layout>
   )
