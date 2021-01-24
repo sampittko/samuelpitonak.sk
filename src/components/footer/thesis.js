@@ -1,7 +1,7 @@
 import React from "react"
 
 const Thesis = ({ text, link, duration }) => (
-  <span className="font-mono font-bold">
+  <div className="font-mono font-bold">
     <a
       href={link}
       rel="noreferrer"
@@ -28,7 +28,7 @@ const Thesis = ({ text, link, duration }) => (
     <span className="mt-2 sm:mt-0 ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
       {duration}
     </span>
-  </span>
+  </div>
 )
 
 export default Thesis
