@@ -4,7 +4,8 @@ module.exports = {
     siteUrl: `https://samuelpitonak.sk`,
     thesis: {
       link: "http://beautofuel.vps.wbsprt.com",
-      text: "beautofuel",
+      text: "Experiment beautofuel",
+      duration: "31. 01. 2021 - 14. 03. 2021",
     },
     author: {
       username: "sampittko",

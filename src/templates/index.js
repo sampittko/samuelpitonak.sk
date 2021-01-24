@@ -28,7 +28,7 @@ const IndexTemplate = ({ pageContext }) => {
   `)
 
   const { positions } = pageContext
-  const { fluid } = data.photo.childImageSharp
+  const { fluid: fluidPhoto } = data.photo.childImageSharp
   const { author } = data.site.siteMetadata
 
   return (
@@ -36,8 +36,8 @@ const IndexTemplate = ({ pageContext }) => {
       <SEO positions={positions} />
       <div className="md:space-x-4 md:flex md:items-center md:justify-center lg:space-x-6">
         <Img
-          fluid={fluid}
-          className="w-24 h-24 mx-auto mb-5 border-4 border-gray-300 rounded-full md:m-0 md:w-20 md:inline-block md:h-20 lg:w-32 lg:h-32"
+          fluid={fluidPhoto}
+          className="w-24 h-24 mx-auto mb-5 border-8 rounded-full border-gray-50 md:m-0 md:w-20 md:inline-block md:h-20 lg:w-32 lg:h-32"
           alt={author.fullname}
         />
         <div className="space-y-1 font-medium leading-6 md:inline-block md:text-lg lg:space-y-3 lg:text-2xl">
