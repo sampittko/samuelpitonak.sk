@@ -24,8 +24,8 @@ module.exports = {
         },
         employee: {
           title: "Software Developer",
-          link: "https://senacor.com",
-          hover: "Senacor Technologies AG",
+          link: "#",
+          hover: "I am currently open to work - hire me!",
         },
       },
     },
