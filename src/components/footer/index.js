@@ -1,18 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Socials from "./socials"
-import Thesis from "./thesis"
 
 const Footer = ({ ...props }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          thesis {
-            link
-            text
-            duration
-          }
           author {
             socials {
               twitter
@@ -26,12 +20,10 @@ const Footer = ({ ...props }) => {
   `)
 
   const { socials } = data.site.siteMetadata.author
-  const { thesis } = data.site.siteMetadata
 
   return (
     <>
       <footer {...props}>
-        <Thesis {...thesis} className="max-w-xs md:max-w-none" />
         <Socials
           {...socials}
           className="flex justify-center pt-6 space-x-6 md:justify-start md:pt-8 "
