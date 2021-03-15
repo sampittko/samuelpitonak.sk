@@ -12,11 +12,6 @@ module.exports = {
         github: "https://github.com/sampittko",
       },
       positions: {
-        student: {
-          title: "Computer Science Student",
-          link: "https://tuke.sk",
-          hover: "Technical University of Košice",
-        },
         employee: {
           title: "Frontend Developer",
           link: "https://bejamas.io",

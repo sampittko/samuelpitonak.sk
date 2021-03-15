@@ -10,11 +10,6 @@ exports.createPages = async function ({ actions, graphql }) {
                 link
                 hover
               }
-              student {
-                title
-                link
-                hover
-              }
             }
           }
         }
