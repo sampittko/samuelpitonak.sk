@@ -18,9 +18,9 @@ module.exports = {
           hover: "Technical University of Košice",
         },
         employee: {
-          title: "Software Developer",
-          link: "#",
-          hover: "I am currently open to work - hire me!",
+          title: "Frontend Developer",
+          link: "https://bejamas.io",
+          hover: "Bejamas",
         },
       },
     },
